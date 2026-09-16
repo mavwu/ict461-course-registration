@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Accessible course registration for ICT461 Web Engineering."
+    />
+    <link rel="icon" href="data:," />
+    <title>ICT461 | Course registration</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="ICT461 registration home">
+          <span class="brand-mark" aria-hidden="true">ICT</span>
+          <span>
+            <strong>Student portal</strong>
+            <small>Course registration</small>
+          </span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#course-info">Course details</a>
+          <a class="nav-cta" href="#registration-form">Register now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span aria-hidden="true">✦</span> ICT461 · 2026 intake</p>
+            <h1 id="page-title">Build the web.<br /><em>Shape what’s next.</em></h1>
+            <p class="hero-intro">
+              Register for ICT461 Web Engineering and turn interface ideas into
+              accessible, responsive experiences that work for everyone.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#registration-form">Start registration <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#course-info">Explore course <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <aside class="course-card" aria-label="ICT461 course snapshot">
+            <div class="card-topline">
+              <span class="card-kicker">Course snapshot</span>
+              <span class="status-dot"><span aria-hidden="true"></span> Open</span>
+            </div>
+            <div class="course-code">ICT<span>461</span></div>
+            <p class="course-name">Web Engineering</p>
+            <div class="card-rule"></div>
+            <dl class="snapshot-list">
+              <div>
+                <dt>Credits</dt>
+                <dd>15</dd>
+              </div>
+              <div>
+                <dt>Duration</dt>
+                <dd>12 weeks</dd>
+              </div>
+              <div>
+                <dt>Level</dt>
+                <dd>Year 4</dd>
+              </div>
+            </dl>
+            <p class="card-footer"><span aria-hidden="true">◌</span> Registration closes 30 Nov 2026</p>
+          </aside>
+        </div>
+      </section>
+
+      <div class="page-shell">
+        <section class="overview-section" id="course-info" aria-labelledby="overview-title">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">01 / Course overview</p>
+            <h2 id="overview-title">A practical course<br /><span>for thoughtful makers.</span></h2>
+          </div>
+
+          <div class="overview-grid">
+            <div class="overview-copy">
+              <p>
+                ICT461 introduces the tools and habits behind dependable web
+                products. You will move from a clear brief to a working,
+                tested interface while practising the standards that make the
+                web inclusive and resilient.
+              </p>
+              <p class="muted-copy">
+                Expect studio-based work, short critiques and a final project
+                that connects structure, style and behaviour.
+              </p>
+            </div>
+
+            <dl class="course-details">
+              <div>
+                <dt>Delivery</dt>
+                <dd>Blended learning</dd>
+              </div>
+              <div>
+                <dt>Prerequisite</dt>
+                <dd>ICT351 or equivalent</dd>
+              </div>
+              <div>
+                <dt>Assessment</dt>
+                <dd>Projects &amp; practicals</dd>
+              </div>
+              <div>
+                <dt>Faculty</dt>
+                <dd>Computing &amp; Informatics</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="registration-section" aria-labelledby="registration-title">
+          <div class="registration-heading">
+            <p class="eyebrow eyebrow-dark">02 / Your place</p>
+            <h2 id="registration-title">Ready when<br /><span>you are.</span></h2>
+            <p>
+              Complete the form to reserve your place. Fields marked with
+              <span aria-hidden="true">*</span><span class="sr-only">asterisk</span>
+              are required.
+            </p>
+          </div>
+
+          <form id="registration-form" novalidate>
+            <fieldset>
+              <legend>Student details</legend>
+              <div class="form-grid">
+                <div class="field field-wide">
+                  <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+                  <input
+                    id="full-name"
+                    name="fullName"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="e.g. Amara Banda"
+                    required
+                    aria-describedby="full-name-error"
+                  />
+                  <p class="field-message" id="full-name-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="student-id">Student number <span aria-hidden="true">*</span></label>
+                  <input
+                    id="student-id"
+                    name="studentId"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    placeholder="e.g. 20261234"
+                    required
+                    aria-describedby="student-id-error"
+                  />
+                  <p class="field-message" id="student-id-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="email">University email <span aria-hidden="true">*</span></label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="you@university.edu"
+                    required
+                    aria-describedby="email-error"
+                  />
+                  <p class="field-message" id="email-error" aria-live="polite"></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Registration details</legend>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="study-mode">Study mode <span aria-hidden="true">*</span></label>
+                  <select id="study-mode" name="studyMode" required aria-describedby="study-mode-error">
+                    <option value="">Select a mode</option>
+                    <option value="on-campus">On campus</option>
+                    <option value="online">Online</option>
+                    <option value="blended">Blended</option>
+                  </select>
+                  <p class="field-message" id="study-mode-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="class-time">Preferred class time <span aria-hidden="true">*</span></label>
+                  <select id="class-time" name="classTime" required aria-describedby="class-time-error">
+                    <option value="">Select a time</option>
+                    <option value="morning">Morning · 08:00–10:00</option>
+                    <option value="afternoon">Afternoon · 13:00–15:00</option>
+                    <option value="evening">Evening · 17:00–19:00</option>
+                  </select>
+                  <p class="field-message" id="class-time-error" aria-live="polite"></p>
+                </div>
+
+                <div class="field field-wide">
+                  <label for="goals">What do you want to make?</label>
+                  <textarea
+                    id="goals"
+                    name="goals"
+                    rows="4"
+                    placeholder="Optional — tell us what you hope to build or learn."
+                    aria-describedby="goals-hint"
+                  ></textarea>
+                  <p class="field-hint" id="goals-hint">A sentence or two is enough.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-footer">
+              <div class="consent-row">
+                <input id="terms" name="terms" type="checkbox" required aria-describedby="terms-error" />
+                <label for="terms">I confirm that these details are accurate and I meet the prerequisite. <span aria-hidden="true">*</span></label>
+              </div>
+              <p class="field-message consent-error" id="terms-error" aria-live="polite"></p>
+
+              <button class="button button-submit" type="submit">
+                Submit registration <span aria-hidden="true">↗</span>
+              </button>
+              <p class="form-note"><span aria-hidden="true">⌁</span> Your details are used only for course registration.</p>
+              <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-brand">ICT461 <span aria-hidden="true">/</span> Web Engineering</span>
+        <span>Student portal · Faculty of Computing &amp; Informatics</span>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
